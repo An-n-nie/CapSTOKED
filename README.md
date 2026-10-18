@@ -123,7 +123,12 @@ This isolates *which information layer buys predictive power, and at which horiz
 | `data/raw/universe_50.csv` | 125,650 rows × 8 cols | Long format, 2,513 trading days per ticker |
 | `data/raw/amzn.csv` | 2,513 rows × 6 cols | Amazon subset used for prototyping; `Close` replaced by `Adj_Close` |
 
-**Data-quality checks (both files):** ✅ no missing values · ✅ no duplicate ticker-date rows · ✅ chronologically sorted · ✅ no zero/negative prices · ✅ no `High < Low` or inconsistent OHL days
+**Data-quality checks (both files):** 
+. ✅ no missing values 
+· ✅ no duplicate ticker-date rows
+· ✅ chronologically sorted 
+· ✅ no zero/negative prices 
+· ✅ no `High < Low` or inconsistent OHL days
 
 ---
 
@@ -239,7 +244,7 @@ The label's end date (*t + h*) is stored alongside every row so it can be used f
 ## Repository Structure
 
 ```
-CapSTOKED/
+Captone I /
 ├── data/
 │   └── raw/
 │       ├── universe_50.csv          # 50-ticker daily OHLCV panel (long format)
@@ -260,7 +265,7 @@ CapSTOKED/
 
 ```bash
 git clone https://github.com/<your-org>/CapSTOKED.git
-cd CapSTOKED
+cd Capstone I
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 jupyter lab
