@@ -1,9 +1,10 @@
-# Cross-Horizon Equity Return Prediction
+# Capstone Project - Stock Prediction
+### Cross-Horizon Equity Return Prediction
 
 > **Does adding market, interest-rate, and volatility information improve directional stock-return forecasts across horizons — and does any edge survive contact with a trading strategy?**
 
 **Team:** Frances Wint · Zuhair Syd · Manya Vikal · Annie Tran
-**Course:** Data Science Capstone I
+**Course:** Data Science Capstone I → II
 
 | | |
 |---|---|
@@ -123,12 +124,7 @@ This isolates *which information layer buys predictive power, and at which horiz
 | `data/raw/universe_50.csv` | 125,650 rows × 8 cols | Long format, 2,513 trading days per ticker |
 | `data/raw/amzn.csv` | 2,513 rows × 6 cols | Amazon subset used for prototyping; `Close` replaced by `Adj_Close` |
 
-**Data-quality checks (both files):** 
-. ✅ no missing values 
-· ✅ no duplicate ticker-date rows
-· ✅ chronologically sorted 
-· ✅ no zero/negative prices 
-· ✅ no `High < Low` or inconsistent OHL days
+**Data-quality checks (both files):** ✅ no missing values · ✅ no duplicate ticker-date rows · ✅ chronologically sorted · ✅ no zero/negative prices · ✅ no `High < Low` or inconsistent OHL days
 
 ---
 
@@ -159,12 +155,7 @@ Because stocks drift upward over time, the share of **Up** labels increases with
 
 > Every step is built around one question: **"What would have been known at prediction time?"**
 
-```
-Acquire ─▶ Clean ─▶ Align ─▶ Feature engineering ─▶ Preprocess ─▶ Split ─▶ Feature selection ─▶ Model ─▶ Tune/validate ─▶ Backtest
-(yfinance,   (dupes,   (target vs.   (rolling stats,       (forward-fill,  (walk-     (VIF, Lasso,          (ML / DL)
- FRED)        NaNs)     feature dates) ratios, returns)    RobustScaler    forward)    wrapper, CFI)
-                                                           fit in-fold)
-```
+![Pipeline diagram](figures/pipeline_diagram.png)
 
 ### Target construction
 For each horizon *h* ∈ {1, 5, 21, 63}:
@@ -244,7 +235,7 @@ The label's end date (*t + h*) is stored alongside every row so it can be used f
 ## Repository Structure
 
 ```
-Captone I /
+<your-repo-name>/
 ├── data/
 │   └── raw/
 │       ├── universe_50.csv          # 50-ticker daily OHLCV panel (long format)
@@ -264,8 +255,8 @@ Captone I /
 ## Getting Started
 
 ```bash
-git clone https://github.com/<your-org>/CapSTOKED.git
-cd Capstone I
+git clone https://github.com/<your-username>/<your-repo-name>.git
+cd <your-repo-name>
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 jupyter lab
