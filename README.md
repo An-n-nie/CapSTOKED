@@ -244,9 +244,6 @@ The label's end date (*t + h*) is stored alongside every row so it can be used f
 │   ├── 01_Download_Data.ipynb       # yfinance download, reshape, sanity checks, save
 │   └── 02_eda_targets_baseline.ipynb# EDA, target labels, walk-forward baselines
 ├── figures/                         # Charts used in this README
-├── presentation/
-│   └── CapSTOKED.pptx               # Capstone I proposal deck
-├── requirements.txt
 └── README.md
 ```
 
