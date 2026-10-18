@@ -252,8 +252,8 @@ The label's end date (*t + h*) is stored alongside every row so it can be used f
 ## Getting Started
 
 ```bash
-git clone https://github.com/<your-username>/<your-repo-name>.git
-cd <your-repo-name>
+git clone https://github.com/<An-n-nie>/<CapSTOKED>.git
+cd <CapSTOKED>
 python -m venv .venv && source .venv/bin/activate
 pip install -r requirements.txt
 jupyter lab
