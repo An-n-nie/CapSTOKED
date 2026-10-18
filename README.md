@@ -1,7 +1,7 @@
 # Capstone Project - Stock Prediction
 ### Cross-Horizon Equity Return Prediction
 
-> **Does adding market, interest-rate, and volatility information improve directional stock-return forecasts across horizons — and does any edge survive contact with a trading strategy?**
+> **Does adding market, interest-rate, and volatility information improve directional stock-return forecasts across horizons, and does any edge survive contact with a trading strategy?**
 
 **Team:** Frances Wint · Zuhair Syd · Manya Vikal · Annie Tran
 **Course:** Data Science Capstone I → II
